@@ -18,7 +18,7 @@ pipeline {
             steps {
                 script {
                     docker.withRegistry('https://registry.hub.docker.com', 'dockerhublogin') {
-                        docker.image("rkeram1/helloworld-java:${env.BUILD_ID}").push()
+                        docker.image("pamzalex/helloworld-java:${env.BUILD_ID}").push()
                     }
                 }
             }
