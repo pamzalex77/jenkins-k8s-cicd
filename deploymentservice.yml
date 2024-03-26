@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: helloworld-java
-        image: yourusername/helloworld-java:latest
+        image: rkeram1/helloworld-java:latest
         ports:
         - containerPort: 8080
 ---
