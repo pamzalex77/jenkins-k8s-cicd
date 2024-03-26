@@ -17,7 +17,7 @@ pipeline {
         stage('Push Docker Image') {
             steps {
                 script {
-                    docker.withRegistry('https://registry.hub.docker.com', 'dockerhublogin') {
+                    docker.withRegistry('https://registry.hub.docker.com', 'pramoddockerhub') {
                         docker.image("pamzalex/helloworld-java:${env.BUILD_ID}").push()
                     }
                 }
