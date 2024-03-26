@@ -4,13 +4,13 @@ pipeline {
     stages {
         stage('Clone Repository') {
             steps {
-                git 'git@github.com:Rkeram/jenkins-k8s-cicd.git'
+                git 'git@github.com:pamzalex77/jenkins-k8s-cicd.git'
             }
         }
         stage('Build Docker Image') {
             steps {
                 script {
-                    docker.build("rkeram1/helloworld-java:${env.BUILD_ID}")
+                    docker.build("pamzalex77/helloworld-java:${env.BUILD_ID}")
                 }
             }
         }
